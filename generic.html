@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Elements Reference - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.post header.major {
+				background-color: #ff5733; /* Vibrant Orange */
+				color: #ffffff; /* White Text */
+				padding: 20px;
+				border-radius: 8px;
+			}
+
+			.post p {
+				color: #4caf50; /* Vibrant Green */
+				font-size: 16px;
+				line-height: 1.6;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">LEARNING'S</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="generic.html">COURSE LEARNING'S</a></li>
+							<li class="active"><a href="elements.html">MY WORK</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<section class="post">
+							<header class="major">
+								<h1>BUSINESS CASE STUDIES</h1>
+								<p>URBAN PLANNING AND DEVELOPMENT</p>
+								<p>ECONOMIC DISRUPTION MANAGEMENT</p>
+							</header>
+
+							<header>Urban Planning and Development</header>
+							<p>Urban planning involves designing and managing city infrastructure, housing, transportation, and public spaces to ensure sustainable development. Our project aims to resolve critical urban challenges like overcrowding, traffic congestion, and environmental degradation by implementing innovative solutions. We focus on creating efficient, inclusive, and eco-friendly spaces that enhance the quality of urban living. Tools like 2D arrays, DFS, and Dijkstra’s algorithm can be utilized.</p>
+							<p><strong>Why use these tools?</strong></p>
+							<ul>
+								<li><strong>DFS:</strong> Used for exploring and analyzing connected components in city layouts, such as identifying regions, ensuring accessibility, and determining feasible development zones.</li>
+								<li><strong>Dijkstra's Algorithm:</strong> Ideal for finding the shortest paths in transportation or utility networks, optimizing routes for emergency services, traffic management, and resource distribution.</li>
+							</ul>
+
+							<header>Economic Disruption Management</header>
+							<p>Economic distribution and management near Indraprastha city, located by the Kosi River, face challenges like uneven resource allocation, inefficient logistics, and underdeveloped infrastructure. These issues hinder equitable growth, disrupt trade, and affect livelihoods. Addressing these requires innovative strategies for sustainable development, efficient resource utilization, and improved socio-economic systems.</p>
+							<p><strong>Probable tools:</strong> Kruskal’s algorithm, queues, and arrays.</p>
+							<p><strong>Why use these tools?</strong></p>
+							<ul>
+								<li><strong>Kruskal's Algorithm:</strong> Used for optimizing resource distribution networks, such as minimizing transportation costs or connecting multiple warehouses with the least expense (Minimum Spanning Tree).</li>
+								<li><strong>Queues:</strong> Efficient for managing task scheduling, like prioritizing shipments or customer service requests.</li>
+								<li><strong>Arrays:</strong> Help store and manipulate large datasets, such as inventory levels, transportation costs, or demand forecasts.</li>
+							</ul>
+						</section>
+						<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Case Studies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff4e3;
+            color: #5a4d41;
+            margin: 20px;
+        }
+        h1 {
+            color: #a85d34;
+        }
+        button {
+            background-color: #a85d34;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #854a27;
+        }
+        #contentContainer {
+            width: 100%;
+            height: 400px;
+            border: 2px solid #a85d34;
+            border-radius: 5px;
+            margin-top: 20px;
+            overflow: auto;
+            padding: 10px;
+            background-color: #fdf8f5;
+            text-align: left; /* Align content to the left */
+        }
+        pre {
+            font-family: "Courier New", monospace;
+            font-size: 14px;
+            color: #5a4d41;
+            white-space: pre-wrap; /* Allow wrapping of long lines */
+            word-wrap: break-word; /* Break long words if needed */
+            line-height: 1.5; /* Increase line spacing for readability */
+            margin: 0;
+        }
+        .placeholder-text {
+            text-align: left; /* Align text to the left */
+            font-weight: bold;
+            color: #a85d34;
+        }
+    </style>
+</head>
+<body>
+    <h1>BUSINESS CASE STUDIES</h1>
+    <button onclick="showCode('flood')">URBAN PLANNING AND DEVELOPMENT</button>
+    <button onclick="showCode('traffic')">ECONOMIC DISRUPTION MANAGEMENT</button>
+
+    <div id="contentContainer">
+        <p class="placeholder-text">Codes will be displayed here</p>
+    </div>
+
+    <script>
+        const floodCode = `
+#include &lt;iostream&gt;
+using namespace std;
+#include &lt;stdio.h&gt;
+#include &lt;limits.h&gt;
+#define INF INT_MAX
+#define V 6 // Number of vertices
+
+int minDistance(int distances[], int visited[]) {
+    int min = INF, min_index;
+
+    for (int v = 0; v < V; v++) {
+        if (!visited[v] && distances[v] <= min) {
+            min = distances[v];
+            min_index = v;
+        }
+    }
+    return min_index;
+}
+
+void dijkstra(int graph[V][V], int src) {
+    int distances[V];
+    int visited[V];
+
+    for (int i = 0; i < V; i++) {
+        distances[i] = INF;
+        visited[i] = 0;
+    }
+
+    distances[src] = 0;
+
+    for (int count = 0; count < V - 1; count++) {
+        int u = minDistance(distances, visited);
+        visited[u] = 1;
+
+        for (int v = 0; v < V; v++) {
+            if (!visited[v] && graph[u][v] && distances[u] != INF &&
+                distances[u] + graph[u][v] < distances[v]) {
+                distances[v] = distances[u] + graph[u][v];
+            }
+        }
+    }
+
+    printf("Vertex\\tDistance from Source\\n");
+    for (int i = 0; i < V; i++) {
+        printf("%d\\t\\t%d\\n", i, distances[i]);
+    }
+}
+
+int main() {
+    int graph[V][V] = {
+        {0, 7, 9, 0, 0, 14},
+        {7, 0, 10, 15, 0, 0},
+        {9, 10, 0, 11, 0, 2},
+        {0, 15, 11, 0, 6, 0},
+        {0, 0, 0, 6, 0, 9},
+        {14, 0, 2, 0, 9, 0}
+    };
+
+    dijkstra(graph, 0);
+
+    return 0;
+}`;
+
+        const trafficCode = `
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+struct Edge {
+    int src, dest, weight;
+};
+
+int findParent(int node, vector<int>& parent) {
+    while (parent[node] != node) {
+        node = parent[node];
+    }
+    return node;
+}
+
+void kruskal(int V, vector<Edge>& edges) {
+    sort(edges.begin(), edges.end(), [](Edge a, Edge b) {
+        return a.weight < b.weight;
+    });
+
+    vector<int> parent(V);
+    for (int i = 0; i < V; i++) {
+        parent[i] = i;
+    }
+
+    vector<Edge> mst;
+
+    for (Edge& edge : edges) {
+        int u = edge.src;
+        int v = edge.dest;
+
+        int parentU = findParent(u, parent);
+        int parentV = findParent(v, parent);
+
+        if (parentU != parentV) {
+            mst.push_back(edge);
+            parent[parentU] = parentV;
+        }
+    }
+
+    cout &lt;&lt; "Edges in the Minimum Spanning Tree:" &lt;&lt; endl;
+    for (Edge& edge : mst) {
+        cout &lt;&lt; edge.src &lt;&lt; " -- " &lt;&lt; edge.dest &lt;&lt; " == " &lt;&lt; edge.weight &lt;&lt; endl;
+    }
+}
+
+int main() {
+    int V, E;
+
+    cout &lt;&lt; "Enter the number of vertices: ";
+    cin &gt;&gt; V;
+    cout &lt;&lt; "Enter the number of edges: ";
+    cin &gt;&gt; E;
+
+    vector&lt;Edge&gt; edges(E);
+
+    cout &lt;&lt; "Enter edges (source, destination, weight):" &lt;&lt; endl;
+    for (int i = 0; i < E; i++) {
+        cin &gt;&gt; edges[i].src &gt;&gt; edges[i].dest &gt;&gt; edges[i].weight;
+    }
+
+    kruskal(V, edges);
+
+    return 0;
+}`;
+
+        function showCode(caseStudy) {
+            const contentContainer = document.getElementById('contentContainer');
+            if (caseStudy === 'flood') {
+                contentContainer.innerHTML = `<pre>${floodCode}</pre>`;
+            } else if (caseStudy === 'traffic') {
+                contentContainer.innerHTML = `<pre>${trafficCode}</pre>`;
+            }
+        }
+    </script>
+</body>
+
+</html>
+						<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDGs Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F9F9; /* Light blue background for a calming effect */
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff; /* White background for readability */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF; /* Bright blue for the title */
+            margin-bottom: 20px;
+        }
+        .sdg-section {
+            margin-bottom: 20px;
+        }
+        .sdg-section h2 {
+            color: #28A745; /* Green for SDG titles */
+            margin-bottom: 10px;
+        }
+        .sdg-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .sdg-section ul li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SDG's</h1>
+
+        <div class="sdg-section">
+            <h2>SDG 8: Decent Work and Economic Growth</h2>
+            <ul>
+                <li><b>8.9.2:</b> Number of jobs in sustainable tourism industries as a proportion of total jobs and GDP.</li>
+            </ul>
+        </div>
+
+        <div class="sdg-section">
+            <h2>SDG 9: Industry, Innovation, and Infrastructure</h2>
+            <ul>
+                <li><b>9.a.1:</b> Total official international support (official development assistance plus other official flows) to infrastructure.</li>
+                <li><b>9.b.1:</b> Proportion of medium and high-tech industry value added in total value added.</li>
+                <li><b>9.c.1:</b> Proportion of population covered by a mobile network, by technology.</li>
+            </ul>
+        </div>
+
+        <div class="sdg-section">
+            <h2>SDG 10: Reduced Inequalities</h2>
+            <ul>
+                <li><b>10.b.1:</b> Total resource flows for development, by recipient and donor countries.</li>
+            </ul>
+        </div>
+
+        <div class="sdg-section">
+            <h2>SDG 11: Sustainable Cities and Communities</h2>
+            <ul>
+                <li><b>11.1.1:</b> Proportion of urban population living in slums, informal settlements, or inadequate housing.</li>
+                <li><b>11.2.1:</b> Proportion of population that has convenient access to public transport.</li>
+                <li><b>11.3.1:</b> Ratio of land consumption rate to population growth rate.</li>
+                <li><b>11.3.2:</b> Proportion of cities with a direct participation structure of civil society in urban planning.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        Sustainable Development Goals (SDGs) - Making a Better World
+    </footer>
+</body>
+</html>
